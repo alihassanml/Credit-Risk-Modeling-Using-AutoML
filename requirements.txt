@@ -6,3 +6,5 @@ shap
 pandas
 matplotlib
 xlrd
+graphviz
+shap

@@ -3,9 +3,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from lightgbm import Booster
 
-# Load model and data
-model = Booster(model_file='lgb_model.txt')
-df = pd.read_parquet("data/processed/credit.parquet")
+model = Booster(model_file='../model/lgb_model.txt', params={"predict_disable_shape_check": True})
+
+df = pd.read_parquet("../data/processed/credit.parquet")
+
+df.drop('ID',axis=1,inplace=True)
+df.reset_index(drop=True,inplace=True)
+
 X = df.drop('default', axis=1)
 
 # SHAP values
