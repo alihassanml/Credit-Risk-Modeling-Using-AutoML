@@ -1,3 +1,6 @@
 .idea
 env
 Documentation.pdf
+credit.csv
+.ipynb_checkpoints
+credit_card.xls

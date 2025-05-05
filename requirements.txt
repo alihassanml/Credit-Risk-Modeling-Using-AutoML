@@ -5,3 +5,4 @@ xgboost
 shap
 pandas
 matplotlib
+xlrd
